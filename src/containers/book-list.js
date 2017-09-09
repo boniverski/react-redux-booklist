@@ -36,7 +36,7 @@ function mapStateToProps(state) {
 
 // Anything returned from this function will end up as props
 // on the BookList container
-function mapDispatchToPops(dispatch) {
+function mapDispatchToProps(dispatch) {
   // Whenever selectBook is called, the result should be passed
   // to all of our reducer
   return bindActionCreators({ selectBook: selectBook}, dispatch)
@@ -45,4 +45,4 @@ function mapDispatchToPops(dispatch) {
 // Promote BookList from a component to a container - it need to know
 // about this new dispatch method, selectBook. Make it available
 // as a prop.
-export default connect(mapStateToProps, mapDispatchToPops)(BookList);
+export default connect(mapStateToProps, mapDispatchToProps)(BookList);
